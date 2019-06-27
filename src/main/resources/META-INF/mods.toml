@@ -1,0 +1,18 @@
+modLoader="javafml"
+loaderVersion="[25,)"
+authors="Example"
+
+[[mods]]
+modId="worldhandlerplugin"
+version="1.14.3-1.0"
+displayName="World Handler Plugin"
+description='''
+Example plugin for WorldHandler
+'''
+
+[[dependencies.worldhandlerplugin]]
+    modId="worldhandler"
+    mandatory=true
+    versionRange="[1.14,)"
+    ordering="NONE"
+    side="BOTH"
