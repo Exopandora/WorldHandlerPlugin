@@ -1,4 +1,4 @@
-Copy the source of WorldHandler in this folder so the structure is as follows:
+If you want to run this in a dev environment then copy the source of WorldHandler in this folder so the structure is as follows:
 
 YOUR_PROJECT/
 └── src/
