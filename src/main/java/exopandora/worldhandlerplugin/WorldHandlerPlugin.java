@@ -3,7 +3,7 @@ package exopandora.worldhandlerplugin;
 import exopandora.worldhandler.gui.category.Categories;
 import exopandora.worldhandler.gui.category.Category;
 import exopandora.worldhandler.gui.content.Content;
-import exopandora.worldhandler.helper.RegistryHelper;
+import exopandora.worldhandler.util.RegistryHelper;
 import exopandora.worldhandlerplugin.content.ContentExample;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent.Register;
