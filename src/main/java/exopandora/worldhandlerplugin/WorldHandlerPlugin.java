@@ -29,7 +29,7 @@ public class WorldHandlerPlugin
 	@SubscribeEvent
 	public void registerContent(Register<Content> event)
 	{
-		// Register our custom content
+		// Register custom content
 		RegistryHelper.register(event.getRegistry(), WorldHandlerPlugin.MODID, "example", WorldHandlerPlugin.EXAMPLE);
 	}
 	
