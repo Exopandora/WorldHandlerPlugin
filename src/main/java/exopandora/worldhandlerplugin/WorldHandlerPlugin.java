@@ -10,6 +10,7 @@ import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(WorldHandlerPlugin.MODID)
@@ -22,6 +23,7 @@ public class WorldHandlerPlugin
 	{
 		// Register world handler specific events
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+		modEventBus.addListener(this::clientSetup);
 		modEventBus.addGenericListener(Content.class, this::registerContent);
 		modEventBus.addGenericListener(Category.class, this::registerCategory);
 	}
@@ -36,7 +38,13 @@ public class WorldHandlerPlugin
 	@SubscribeEvent
 	public void registerCategory(Register<Category> event)
 	{
-		// Replace containers tab with the example tab
+		// Register custom categories here
+	}
+	
+	@SubscribeEvent
+	public void clientSetup(FMLClientSetupEvent event)
+	{
+		// Replace container tab with the example tab
 		Categories.MAIN.getContents().set(1, new ResourceLocation(WorldHandlerPlugin.MODID, "example"));
 	}
 }
