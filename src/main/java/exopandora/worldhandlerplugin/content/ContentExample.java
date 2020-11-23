@@ -1,10 +1,10 @@
 package exopandora.worldhandlerplugin.content;
 
-import exopandora.worldhandler.gui.button.GuiButtonBase;
 import exopandora.worldhandler.gui.category.Categories;
 import exopandora.worldhandler.gui.category.Category;
 import exopandora.worldhandler.gui.container.Container;
 import exopandora.worldhandler.gui.content.Content;
+import exopandora.worldhandler.gui.widget.button.GuiButtonBase;
 import exopandora.worldhandler.util.ActionHelper;
 import exopandora.worldhandlerplugin.WorldHandlerPlugin;
 import net.minecraft.client.Minecraft;
