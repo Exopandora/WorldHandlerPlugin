@@ -120,7 +120,7 @@ dependencies {
 	// http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
 	// http://www.gradle.org/docs/current/userguide/dependency_management.html
 	
-	compile fg.deobf('curse.maven:worldhandler-228970:3251233')
+	implementation fg.deobf('curse.maven:worldhandler-228970:3251233')
 }
 
 jar {
