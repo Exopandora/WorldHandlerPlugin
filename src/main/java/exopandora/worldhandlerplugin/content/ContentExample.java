@@ -29,7 +29,7 @@ public class ContentExample extends Content
 		
 		container.add(new GuiButtonBase(x, y, 232, 20, new StringTextComponent("Example button"), () ->
 		{
-			Minecraft.getInstance().player.sendChatMessage("Example chat messsage");
+			Minecraft.getInstance().player.chat("Example chat messsage");
 		}));
 	}
 	
