@@ -8,9 +8,9 @@ import exopandora.worldhandler.gui.widget.button.GuiButtonBase;
 import exopandora.worldhandler.util.ActionHelper;
 import exopandora.worldhandlerplugin.WorldHandlerPlugin;
 import net.minecraft.client.Minecraft;
-import net.minecraft.util.text.IFormattableTextComponent;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TranslationTextComponent;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
@@ -22,12 +22,12 @@ public class ContentExample extends Content
 	{
 		// Register default back and back to game buttons
 		
-		container.add(new GuiButtonBase(x, y + 96, 114, 20, new TranslationTextComponent("gui.worldhandler.generic.back"), () -> ActionHelper.back(this)));
-		container.add(new GuiButtonBase(x + 118, y + 96, 114, 20, new TranslationTextComponent("gui.worldhandler.generic.backToGame"), ActionHelper::backToGame));
+		container.add(new GuiButtonBase(x, y + 96, 114, 20, new TranslatableComponent("gui.worldhandler.generic.back"), () -> ActionHelper.back(this)));
+		container.add(new GuiButtonBase(x + 118, y + 96, 114, 20, new TranslatableComponent("gui.worldhandler.generic.backToGame"), ActionHelper::backToGame));
 		
 		// Register custom buttons
 		
-		container.add(new GuiButtonBase(x, y, 232, 20, new StringTextComponent("Example button"), () ->
+		container.add(new GuiButtonBase(x, y, 232, 20, new TextComponent("Example button"), () ->
 		{
 			Minecraft.getInstance().player.chat("Example chat messsage");
 		}));
@@ -40,15 +40,15 @@ public class ContentExample extends Content
 	}
 	
 	@Override
-	public IFormattableTextComponent getTitle()
+	public MutableComponent getTitle()
 	{
-		return new StringTextComponent("Example Title");
+		return new TextComponent("Example Title");
 	}
 	
 	@Override
-	public IFormattableTextComponent getTabTitle()
+	public MutableComponent getTabTitle()
 	{
-		return new StringTextComponent("Example");
+		return new TextComponent("Example");
 	}
 	
 	@Override
