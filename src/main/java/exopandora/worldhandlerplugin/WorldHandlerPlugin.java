@@ -14,7 +14,6 @@ import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fmllegacy.network.FMLNetworkConstants;
 
 @Mod(WorldHandlerPlugin.MODID)
 public class WorldHandlerPlugin
@@ -29,7 +28,7 @@ public class WorldHandlerPlugin
 		modEventBus.addListener(this::clientSetup);
 		modEventBus.addGenericListener(Content.class, this::registerContent);
 		modEventBus.addGenericListener(Category.class, this::registerCategory);
-		ModLoadingContext.get().registerExtensionPoint(DisplayTest.class, () -> new DisplayTest(() -> FMLNetworkConstants.IGNORESERVERONLY, (remote, isServer) -> true));
+		ModLoadingContext.get().registerExtensionPoint(DisplayTest.class, () -> new DisplayTest(() -> "ANY", (remote, isServer) -> true));
 	}
 	
 	@SubscribeEvent
