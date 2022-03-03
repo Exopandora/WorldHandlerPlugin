@@ -5,7 +5,7 @@ license="License"
 
 [[mods]]
 modId="worldhandlerplugin"
-version="1.18.1-1.0.2"
+version="1.18.2-1.0.2"
 displayName="World Handler Plugin"
 description='''
 Example plugin for WorldHandler
