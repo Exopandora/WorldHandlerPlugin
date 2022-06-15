@@ -1,0 +1,16 @@
+# Ignore Everything
+/*
+
+# Except
+
+!.gitignore
+!/lib/
+!/src/
+!/gradle/
+!gradlew
+!gradlew.bat
+!build.gradle
+!README.md
+
+# Subdirs
+# !*/

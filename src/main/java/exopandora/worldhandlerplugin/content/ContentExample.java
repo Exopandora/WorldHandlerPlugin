@@ -8,9 +8,8 @@ import exopandora.worldhandler.gui.widget.button.GuiButtonBase;
 import exopandora.worldhandler.util.ActionHelper;
 import exopandora.worldhandlerplugin.WorldHandlerPlugin;
 import net.minecraft.client.Minecraft;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 
 public class ContentExample extends Content
 {
@@ -19,12 +18,12 @@ public class ContentExample extends Content
 	{
 		// Register default back and back to game buttons
 		
-		container.add(new GuiButtonBase(x, y + 96, 114, 20, new TranslatableComponent("gui.worldhandler.generic.back"), () -> ActionHelper.back(this)));
-		container.add(new GuiButtonBase(x + 118, y + 96, 114, 20, new TranslatableComponent("gui.worldhandler.generic.backToGame"), ActionHelper::backToGame));
+		container.add(new GuiButtonBase(x, y + 96, 114, 20, Component.translatable("gui.worldhandler.generic.back"), () -> ActionHelper.back(this)));
+		container.add(new GuiButtonBase(x + 118, y + 96, 114, 20, Component.translatable("gui.worldhandler.generic.backToGame"), ActionHelper::backToGame));
 		
 		// Register custom buttons
 		
-		container.add(new GuiButtonBase(x, y, 232, 20, new TextComponent("Example button"), () ->
+		container.add(new GuiButtonBase(x, y, 232, 20, Component.literal("Example button"), () ->
 		{
 			Minecraft.getInstance().player.chat("Example chat messsage");
 		}));
@@ -39,18 +38,18 @@ public class ContentExample extends Content
 	@Override
 	public MutableComponent getTitle()
 	{
-		return new TextComponent("Example Title");
+		return Component.literal("Example Title");
 	}
 	
 	@Override
 	public MutableComponent getTabTitle()
 	{
-		return new TextComponent("Example");
+		return Component.literal("Example");
 	}
 	
 	@Override
 	public Content getActiveContent()
 	{
-		return WorldHandlerPlugin.EXAMPLE;
+		return Content.REGISTRY.getValue(WorldHandlerPlugin.CONTENT_EXAMPLE_RESOURCE_LOCATION);
 	}
 }
