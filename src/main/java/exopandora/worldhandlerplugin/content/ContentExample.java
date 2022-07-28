@@ -25,7 +25,7 @@ public class ContentExample extends Content
 		
 		container.add(new GuiButtonBase(x, y, 232, 20, Component.literal("Example button"), () ->
 		{
-			Minecraft.getInstance().player.chat("Example chat messsage");
+			Minecraft.getInstance().player.chatSigned("Example chat messsage", null);
 		}));
 	}
 	
