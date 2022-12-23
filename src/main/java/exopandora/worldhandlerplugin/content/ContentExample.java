@@ -18,14 +18,14 @@ public class ContentExample extends Content
 	{
 		// Register default back and back to game buttons
 		
-		container.add(new GuiButtonBase(x, y + 96, 114, 20, Component.translatable("gui.worldhandler.generic.back"), () -> ActionHelper.back(this)));
-		container.add(new GuiButtonBase(x + 118, y + 96, 114, 20, Component.translatable("gui.worldhandler.generic.backToGame"), ActionHelper::backToGame));
+		container.addRenderableWidget(new GuiButtonBase(x, y + 96, 114, 20, Component.translatable("gui.worldhandler.generic.back"), () -> ActionHelper.back(this)));
+		container.addRenderableWidget(new GuiButtonBase(x + 118, y + 96, 114, 20, Component.translatable("gui.worldhandler.generic.backToGame"), ActionHelper::backToGame));
 		
 		// Register custom buttons
 		
-		container.add(new GuiButtonBase(x, y, 232, 20, Component.literal("Example button"), () ->
+		container.addRenderableWidget(new GuiButtonBase(x, y, 232, 20, Component.literal("Example button"), () ->
 		{
-			Minecraft.getInstance().player.chatSigned("Example chat messsage", null);
+			Minecraft.getInstance().player.connection.sendChat("Example chat messsage");
 		}));
 	}
 	
