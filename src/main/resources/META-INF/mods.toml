@@ -1,11 +1,11 @@
 modLoader="javafml"
-loaderVersion="[44,)"
+loaderVersion="[45,)"
 authors="Example"
 license="License"
 
 [[mods]]
 modId="worldhandlerplugin"
-version="1.19.3-1.0.2"
+version="1.19.4-1.0.2"
 displayName="World Handler Plugin"
 description='''
 Example plugin for WorldHandler
@@ -14,6 +14,6 @@ Example plugin for WorldHandler
 [[dependencies.worldhandlerplugin]]
     modId="worldhandler"
     mandatory=true
-    versionRange="[1.19.3,)"
+    versionRange="[1.19.4,)"
     ordering="NONE"
     side="BOTH"
