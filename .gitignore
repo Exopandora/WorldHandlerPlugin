@@ -10,6 +10,8 @@
 !gradlew
 !gradlew.bat
 !build.gradle
+!gradle.properties
+!settings.gradle
 !README.md
 
 # Subdirs
